@@ -41,12 +41,12 @@ const AboutUs = () => {
             </div>
 
             <div className="col">
-                <img className="img-fluid" src="https://149451308.v2.pressablecdn.com/wp-content/uploads/2019/04/10-Wedding-Planners-to-Follow-on-Instagram-Allenbrooke-Farms.jpg" alt="apartments" />
+                <img className="img-fluid" src="https://149451308.v2.pressablecdn.com/wp-content/uploads/2019/04/10-Wedding-Planners-to-Follow-on-Instagram-Allenbrooke-Farms.jpg" alt="" />
             </div>
 
 
             <div className="col">
-                <img className="img-fluid" src="https://st2.depositphotos.com/1038226/11716/i/950/depositphotos_117161470-stock-photo-event-catering-food.jpg" alt="apartments" />
+                <img className="img-fluid" src="https://st2.depositphotos.com/1038226/11716/i/950/depositphotos_117161470-stock-photo-event-catering-food.jpg" alt="" />
             </div>
 
             <div className="col d-flex align-items-center justify-content-center">
