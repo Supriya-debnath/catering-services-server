@@ -1,0 +1,36 @@
+/* .new{
+    margin: 30px;
+} */
+
+.grenda{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.color{
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-family: initial; */
+}
+.ser{
+    color: brown;
+}
+.bg{
+    background-color: rgb(243, 215, 190);
+}
+.cat{
+    font-family: 'Nava Script', cursive;
+}
+
+/* .button{
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: gray;
+    color: black;
+}
+.button:hover{
+    background-color: rgb(65, 131, 65);
+} */

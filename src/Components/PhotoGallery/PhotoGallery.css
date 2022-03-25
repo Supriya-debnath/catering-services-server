@@ -1,0 +1,91 @@
+.container{
+    margin: 0 auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.clr{
+    clear: both;
+}
+.common_head{
+    padding-top: 50px;
+}
+.gallery{
+    color: #5bc5f4;
+    padding-top: 50px;
+    font-family: fantasy;
+}
+#portfolio{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.port_col {
+	width: 22.91%;
+	float: left;
+	margin-right: 20px;
+}
+aq  a
+
+
+.port_col:nth-child(){
+    margin-right: 0;
+}
+.port_mar{
+    margin-bottom: 20px;
+}
+.port_img img{
+    width: 100%;
+    max-width: 100%;
+}
+.port_row{
+    padding-top: 30px;
+}
+.port_img{
+    position: relative;
+}
+.port_img .overly{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.6);
+    transform: scale(0);
+    transition: all linear .3s;
+}
+.port_img .overly i{
+    width: 40px;
+    height: 40px;
+    background: #5bc5f4;
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+.port_img:hover .overly{
+    transform: scale(1);
+}
