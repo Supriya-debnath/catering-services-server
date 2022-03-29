@@ -1,4 +1,21 @@
-.banner-img {
+/* .slider .slider-text-container {
+    margin-top: -6px;
+}
+
+@media only screen and (max-width: 599px) {
+    .slider .hide-slider {
+        display: none !important;
+    }
+
+    .slider .slider-title {
+        font-size: 26px;
+    }
+} */
+
+
+
+
+ .banner-img {
     background-image:  linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)),url(https://humayra.com.bd/wp-content/uploads/2019/05/aa-15.jpg);
     background-size: 100% 100%;
     height: 550px;
@@ -31,10 +48,6 @@
     margin: 20px;
     padding: 5px 25px;
     border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
+} 
 
   

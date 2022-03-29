@@ -1,0 +1,18 @@
+.service-banner {
+    padding-top: 70px;
+    /* padding: 50px; */
+}
+.service-title{
+    color: #5bc5f4;
+    font-family: fantasy;
+}
+
+@media only screen and (max-width: 767px) {
+    .service-banner {
+        padding: 20px;
+    }
+
+    .service-title {
+        font-size: 24px;
+    }
+}

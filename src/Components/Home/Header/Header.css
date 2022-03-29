@@ -17,6 +17,10 @@
 .ser{
     color: brown;
 }
+.new{
+    color: gray;
+    font-weight: bold;
+}
 .bg{
     background-color: rgb(243, 215, 190);
 }

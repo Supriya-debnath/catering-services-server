@@ -41,6 +41,7 @@ const PhotoGallery = () => {
         </div>
        
     </div>
+    
     <div className="col-lg-3 port_col">
         <div className="port_img port_mar">
             <img src="https://i.pinimg.com/originals/9b/d7/4a/9bd74a3cb739d9e696701994b4899326.jpg" alt=""/>

@@ -32,25 +32,25 @@ const Footer = () => {
 
 
                             <p>
-                                <NavLink to="/explore" className="text-white text-decoration-none small-text">
+                                <NavLink to="/services" className="text-white text-decoration-none small-text">
                                     Ceromony
                                 </NavLink>
                             </p>
 
                             <p>
-                                <NavLink to="/explore" className="text-white text-decoration-none small-text">
+                                <NavLink to="/services" className="text-white text-decoration-none small-text">
                                     Birthday Party
                                 </NavLink>
                             </p>
 
                             <p>
-                                <NavLink to="/explore" className="text-white text-decoration-none small-text">
+                                <NavLink to="/services" className="text-white text-decoration-none small-text">
                                     planner
                                 </NavLink>
                             </p>
 
                             <p>
-                                <NavLink to="/explore" className="text-white text-decoration-none small-text">
+                                <NavLink to="/services" className="text-white text-decoration-none small-text">
                                     Wedding Ceromony
                                 </NavLink>
                             </p>
@@ -69,8 +69,8 @@ const Footer = () => {
                             </p>
 
                             <p>
-                                <NavLink to="/explore" className="text-white text-decoration-none small-text">
-                                    Explore
+                                <NavLink to="/services" className="text-white text-decoration-none small-text">
+                                    Services
                                 </NavLink>
                             </p>
 
