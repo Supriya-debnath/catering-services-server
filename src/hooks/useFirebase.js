@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, 
-createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, sendEmailVerification } 
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, 
+onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } 
 from "firebase/auth";
 
 import initializeFirebase from "../Components/Firebase/firebase.init";
@@ -8,106 +8,108 @@ import initializeFirebase from "../Components/Firebase/firebase.init";
 initializeFirebase();
 
 const useFirebase = () => {
-    const [user, setUser] = useState({})
-    const [error, setError] = useState('')
-    const [isLoading, setIsloading] = useState(true)
+    const [user, setUser] = useState({});
+    const [error, setError] = useState("");
+    const [logInError, setLogInError] = useState("");
+    const [loading, setLoading] = useState(true);
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-
-    const signInUsingGoogle = () => {
-        setIsloading(true)
-        return signInWithPopup(auth, googleProvider)
+    const signInWithGoogle = (location, history) => {
+        setLoading(true);
+        signInWithPopup(auth, googleProvider)
             .then((result) => {
+                const user = result.user;
+                console.log(user);
 
-            }).catch((error) => {
-                const errorMessage = error.message;
-                setError(errorMessage)
-            }).finally(() => setIsloading(false))
-    }
-
-
-    // registration
-    const createNewUserUsingEmailPassword = (auth, email, password) => {
-        setIsloading(true)
-        return createUserWithEmailAndPassword(auth, email, password)
-
+                setLogInError("");
+                const destination = location?.state?.from || "/dashboard";
+                history.replace(destination);
+            })
             .catch((error) => {
-                const errorMessage = error.message;
-                setError(errorMessage);
-            }).finally(() => setIsloading(false))
-    }
+                setLogInError(error.message);
+            })
+            .finally(() => setLoading(false));
+    };
 
+    // user registration
+    const handleUserRegister = (email, password, name, history) => {
+        setLoading(true);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((results) => {
+                setError("");
+                const newUser = { email, displayName: name };
+                setUser(newUser);
 
-    const updateProfiles = (auth, displayName) => {
-        setIsloading(true)
-        return updateProfile(auth.currentUser, {
-            displayName: displayName
-        })
+                // set name after register
+                updateProfile(auth.currentUser, {
+                    displayName: name,
+                })
+                    .then(() => {})
+                    .catch((error) => {});
+                history.replace("/");
+            })
             .catch((error) => {
-                // An error occurred
-                // ...
-            }).finally(() => setIsloading(false))
-    }
+                setError(error.message);
+            })
+            .finally(() => setLoading(false));
+    };
 
-
-
-    const signInWithEmailPassword = (auth, email, password) => {
-        setIsloading(true)
-        return signInWithEmailAndPassword(auth, email, password)
+    // user login
+    const handleUserLogin = (email, password, location, history) => {
+        setLoading(true);
+        signInWithEmailAndPassword(auth, email, password)
+            .then((results) => {
+                const redirect_uri = location?.state?.from || "/dashboard";
+                history.push(redirect_uri);
+                setLogInError("");
+            })
             .catch((error) => {
-                const errorMessage = error.message;
-                setError(errorMessage);
-            }).finally(() => setIsloading(false))
-    }
+                setLogInError(error.message);
+            })
+            .finally(() => setLoading(false));
+    };
 
-
-    const verifyEmail = () => {
-        setIsloading(true)
-        sendEmailVerification(auth.currentUser)
-            .then(() => {
-                // Email verification sent!
-                // ...
-            }).finally(() => setIsloading(false))
-    }
-
-
+    // user state observer
     useEffect(() => {
-        const unSubscribed = onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                setUser(user)
-                setError('')
+                setUser(user);
             } else {
-                setUser({})
+                setUser({});
             }
-            setIsloading(false)
+            setLoading(false);
         });
-        return () => unSubscribed
+        return () => unsubscribe;
     }, [auth]);
 
 
-    const logOut = () => {
-        setIsloading(true)
-        signOut(auth).then(() => {
-            setUser({})
-        }).catch((error) => {
-
-        }).finally(() => setIsloading(false))
-    }
-   
+    // user logout
+    const logOut = (history) => {
+        setLoading(true);
+        signOut(auth)
+            .then(() => {
+                // Sign-out successful.
+                history.replace("/");
+            })
+            .catch((error) => {
+                // An error happened.
+            })
+            .finally(() => setLoading(false));
+    };
 
     return {
-        auth, 
-        user, 
-        error, 
-        signInUsingGoogle, 
-        createNewUserUsingEmailPassword, 
-        signInWithEmailPassword, 
-        verifyEmail,
+        user,
+        setLoading,
+        handleUserRegister,
+        signInWithGoogle,
         logOut,
-        isLoading, 
-        updateProfiles
-    }
+        handleUserLogin,
+        loading,
+        error,
+        logInError,
+    };
 };
+
 
 export default useFirebase;
