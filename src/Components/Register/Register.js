@@ -112,6 +112,7 @@ const Register = () => {
                             </Col>
                         </Row>
                     </div>
+                    
                 </Container>
             </div>
         </>
