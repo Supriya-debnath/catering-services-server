@@ -2,10 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import React, { createContext, useState } from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
-  BrowserRouter
 } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
 import Header from './Components/Home/Header/Header';
@@ -18,6 +17,7 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import OurServices from './Components/OurServices/OurServices';
 import Booking from './Components/Booking/Booking';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
 
 export const UserContext=createContext();
 
@@ -46,9 +46,11 @@ function App() {
          <Route path="/about">
            <AboutUs></AboutUs>
          </Route>
-          <Route path="/booking/:id">
+          <PrivateRoute path="/booking/:id">
             <Booking></Booking>
-          </Route>
+          </PrivateRoute>
+          
+
          <Route path="/login">
            <Login></Login>
          </Route>

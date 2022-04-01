@@ -33,7 +33,7 @@ const AboutUs = () => {
         <div className="row row-cols-1 row-cols-md-2 g-2">
             <div className="col d-flex align-items-center justify-content-center">
                 <div className="w-75 banner-text-container">
-                    <h4 className="display-6 cursive-text head">Who We Are</h4> <hr />
+                    <h4 className="display-6 cursive-text head1">Who We Are</h4> <hr />
                     <p className="text-muted small-text">
                     Catering is the business of providing food service at events. The catering company usually prepares the food at its premises and delivers it to the event when needed. It may also provide drinks, crockery, cutlery, glassware, decorations and service staff.
                     </p>
@@ -51,7 +51,7 @@ const AboutUs = () => {
 
             <div className="col d-flex align-items-center justify-content-center">
                 <div className="w-75 banner-text-container">
-                    <h4 className="display-6 cursive-text head">Why You Trust Us</h4> <hr />
+                    <h4 className="display-6 cursive-text head1">Why You Trust Us</h4> <hr />
                     <p className="text-muted small-text">
                     We want to be a reliable service for everyone, and our team knows that your trust is a reward for the excellent job. To win this reward, we provide the high-quality service and care about every customer.
                     </p>

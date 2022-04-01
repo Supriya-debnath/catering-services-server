@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+
+import React  from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Menus.css';
 
 const Menus = () => {
+
     return (
         <div className='blogs'>
             <Container>
@@ -51,3 +53,41 @@ const Menus = () => {
 };
 
 export default Menus;
+
+
+
+
+// import React, { Component } from "react";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css"; 
+// import "slick-carousel/slick/slick-theme.css";
+// import LoadDB from '../../LoadDB/LoadDB';
+
+// const Menus = () => {
+//     const [items] = LoadDB()
+//     const settings = {
+//         dots: true,
+//         infinite: true,
+//         speed: 500,
+//         slidesToShow: 3,
+//         slidesToScroll: 1
+//       };
+//     return (
+//         <div>
+//         <h2> Single Item</h2>
+//         <Slider {...settings}>
+//         {[1,2,3,4].map((item,index) => {
+//             return <div key={index}>
+                
+//                 {item}</div>;
+//         })}
+//         </Slider>
+//       </div>
+//     );
+// };
+
+// export default Menus;
+
+ 
+
+

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import './Footer.css';
 
@@ -18,8 +19,22 @@ const Footer = () => {
                                 style={{ width: "60px", backgroundColor: "#0DCAF0", height: "2px" }}
                             />
                             <p className="small-text footer-about">
-                            Excellent communication and interpersonal skills.The caterer is responsible for developing the menu, preparing, transporting, and serving the food, and assisting with the cleanup.
+                            The caterer is responsible for developing the menu and serving the food, and assisting with the cleanup.
                             </p>
+                            <div className="col-md-6 col-lg-12 text-center ">
+                            <Link to='/'>
+                                <i className="fab fa-facebook-f  me-4 fs-4"> </i>
+                            </Link >
+                            <Link to='/'>
+                                <i className="fab fa-twitter  me-4 fs-4"> </i>
+                            </Link>
+                            <Link to='/'>
+                                <i className="fab fa-linkedin-in me-4 fs-4"> </i>
+                            </Link>
+                            <Link to='/'>
+                                <i className="fab fa-instagram fs-4"> </i>
+                            </Link>
+                        </div>
                         </div>
 
                         {/* Service */}

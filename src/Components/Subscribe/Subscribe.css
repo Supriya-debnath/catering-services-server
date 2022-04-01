@@ -1,0 +1,45 @@
+.Sbanner-img {
+    background-image: url(https://cdn0.weddingwire.in/vendor/2765/3_2/960/jpg/gallery-5_15_362765-161348396788482.jpeg);
+    background-size: 100% 100%;
+    padding-bottom: 30px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Sbanner-img::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: 0;
+}
+.Sbanner-img{
+    position: relative;
+}
+.Sbanner-img > * {
+    z-index: 10;
+    position: relative;
+}
+.Sbanner-text {
+    text-align: center;
+}
+
+.Sbanner-text h1 {
+    padding: 5px;
+    color: #f5eeee;
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.Sbanner-text p {
+    color: #ffff;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 18px;
+}

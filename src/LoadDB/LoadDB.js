@@ -1,13 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const LoadDB = () => {
-    const [menus, setMenus] = useState()
+    const [items, setItems] = useState()
     useEffect(() => {
         fetch('/db.json')
             .then(res => res.json())
-            .then(data => setMenus(data))
+            .then(data => setItems(data))
     }, [])
-    return [menus, setMenus]
+    return [items, setItems]
 };
 
 export default LoadDB;
+
+
+
+
+
+
+
+// import { useEffect, useState } from 'react';
+
+// const LoadDB = () => {
+//     const [menus, setMenus] = useState()
+//     useEffect(() => {
+//         fetch('/db.json')
+//             .then(res => res.json())
+//             .then(data => setMenus(data))
+//     }, [])
+//     return [menus, setMenus]
+// };
+
+// export default LoadDB;

@@ -1,6 +1,5 @@
-import { Button } from 'bootstrap';
 import { useState } from 'react';
-import { Alert, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
+import { Alert, Button, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
 import { useLocation } from 'react-router';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -67,7 +66,7 @@ const Login = () => {
                                                     type="password"
                                                     name="password"
                                                     onBlur={handleOnBlur}
-                                                    placeholder="Your Pass"
+                                                    placeholder="Your Password"
                                                     required
                                                     className="login-input"
                                                 />
@@ -123,7 +122,7 @@ const Login = () => {
                             <Col xs={12} md={6}>
                                 <img
                                     className="img-fluid imag"
-                                    src="https://login.gov/assets/img/login-gov-600x314.png"
+                                    src="https://images.unsplash.com/photo-1529539795054-3c162aab037a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9naW58ZW58MHx8MHx8&w=1000&q=80"
                                     alt=""
                                 />
                             </Col>

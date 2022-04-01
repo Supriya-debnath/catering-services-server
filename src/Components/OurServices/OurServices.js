@@ -7,7 +7,7 @@ const OurServices = () => {
     const [services, setServices]= useState([])
 
     useEffect(() => {
-        fetch("/servicedb.json")
+        fetch("http://localhost:5000/services")
             .then(res => res.json())
             .then(data => {
                 const reverseData = data.slice().reverse();
@@ -23,13 +23,13 @@ const OurServices = () => {
             <div>
                 <div>
                     <small className="text-muted small-text">
-                        Book a luxury apartments at a great price! Grab a last-minute offer and start
+                    A catering service a review of a contract with a prospective customer as 
                     </small>
                 </div>
 
                 <div>
                     <small className="text-muted small-text">
-                        moving to a new home.
+                    part of booking procedures.
                     </small>
                 </div>
             </div>

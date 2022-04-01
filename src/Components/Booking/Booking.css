@@ -1,0 +1,20 @@
+.place-order-header {
+    /* color: #da0037; */
+    color: orange;
+}
+.left-div {
+    box-shadow: rgba(194, 191, 191, 0.35) 0px 5px 15px;
+}
+.img-size {
+    width: 100%;
+    height: 300px;
+}
+
+.serviceName{
+    color: rgba(7, 134, 123, 0.82);
+    font-size: 20px;
+}
+.serviceName1{
+    color: darkred;
+    font-size: 30px;
+}

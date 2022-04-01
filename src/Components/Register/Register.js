@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, Col, Container, Form, Row, Spinner } from 'react-bootstrap';
+import { Alert, Col, Container, Row, Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -53,14 +53,14 @@ const Register = () => {
                                                 <input
                                                     className="p-2 mb-3 form-control"
                                                     type="password"
-                                                    placeholder="Type Password"
+                                                    placeholder="Password"
                                                     {...register("password")}
                                                     required
                                                 />
                                                 <input
                                                     className="p-2 mb-3 form-control"
                                                     type="password"
-                                                    placeholder="ReType Password"
+                                                    placeholder="Confirm Password"
                                                     {...register(
                                                         "confPassword"
                                                     )}
