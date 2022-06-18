@@ -1,35 +1,54 @@
-/* .slider .slider-text-container {
-    margin-top: -6px;
-}
 
-@media only screen and (max-width: 599px) {
-    .slider .hide-slider {
-        display: none !important;
-    }
-
-    .slider .slider-title {
-        font-size: 26px;
-    }
-} */
-
-
-
-
- .banner-img {
+ /* .banner-img {
     background-image:  linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)),url(https://humayra.com.bd/wp-content/uploads/2019/05/aa-15.jpg);
     background-size: 100% 100%;
     height: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
+} */
+
+.banner-img {
+    background-image:
+    linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)),url(https://humayra.com.bd/wp-content/uploads/2019/05/aa-15.jpg);
+    background-size: 100% 100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+    
 }
-.banner-text {
-    text-align: center;
+
+@keyframes animate{
+    0%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://5.imimg.com/data5/NE/MN/GLADMIN-63207391/catering-service-for-social-500x500.png);
+    } 20%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://5.imimg.com/data5/JJ/ET/PD/ANDROID-87019860/product-jpeg-500x500.jpeg);
+    }
+     /* 20%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://cdn0.weddingwire.in/vendor/9865/3_2/1280/jpg/catering-royal-catering-services-catering-setup-2_15_309865-159057093440061.jpeg);
+    }  */
+    40%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://i0.wp.com/www.drjcatering.com/wp-content/uploads/2019/09/129484657_s.jpg?fit=847%2C565&ssl=1);
+    } 60%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://cdn.eventplanner.net/imgs/rt4452_tip-hoe-kies-je-een-partycateraar@2x.jpg);
+    } 80%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://cdn.eventplanner.net/imgs/rt4452_tip-hoe-kies-je-een-partycateraar@2x.jpg);
+    }
 }
 
 .banner-text h1 {
     padding: 5px;
-    color: #f5eeee;
+    color: #f8f4f5;
     margin-top: 10px;
     font-size: 60px;
     font-weight: 900;

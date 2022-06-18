@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Contexts/useAuth/useAuth';
 
 const Register = () => {
-    const { error, user, loading, handleUserRegister } = useAuth();
+    const { error, user, loading, handleUserRegister} = useAuth();
     const history = useHistory();
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
@@ -14,8 +14,19 @@ const Register = () => {
             alert("Your password did not match");
             return;
         }
+        // const validEmail = () => {
+        //     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(user.emailAddr.value))
+        //      {
+        //        return (true)
+        //      }
+        //        alert("You have entered an invalid email address!")
+        //        return (false)
+        //    } 
+           
+           
         handleUserRegister(data.email, data.password, data.name, history);
         // console.log(data);
+        // validEmail();
     };
 
     return (
@@ -43,6 +54,7 @@ const Register = () => {
                                                     {...register("name")}
                                                     required
                                                 />
+
                                                 <input
                                                     className="p-2 mb-2 form-control"
                                                     type="email"

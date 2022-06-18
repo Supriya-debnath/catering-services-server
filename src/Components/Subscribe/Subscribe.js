@@ -14,8 +14,8 @@ const Subscribe = () => {
             </p>
             <div>
             <span >
-                            <input style={{ border: '2px solid gray' }} type="email" className="w-40 ps-2 rounded-pill py-2" placeholder="email address" /> <Button variant="outline-success" className="rounded-pill px-2 py-2">Subscribe <i class="fab fa-telegram-plane"></i></Button>
-                        </span>
+                <input style={{ border: '2px solid gray' }} type="email" className="w-40 ps-2 rounded-pill py-2" placeholder="email address" /> <Button variant="outline-success" className="rounded-pill px-2 py-2">Subscribe <i class="fab fa-telegram-plane"></i></Button>
+            </span>
             </div>
         </div>
     </div>

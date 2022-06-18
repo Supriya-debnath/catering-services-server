@@ -19,25 +19,6 @@ const Service = ({service}) => {
                             {description.slice(0, 200)}
                         </p>
 
-                       
-
-                        {/* <div className="row">
-                            <div className="col-6">
-                                <FontAwesomeIcon icon={faStar} className="more-small-text text-warning me-1" />
-                                <FontAwesomeIcon icon={faStar} className="more-small-text text-warning me-1" />
-                                <FontAwesomeIcon icon={faStar} className="more-small-text text-warning me-1" />
-                                <FontAwesomeIcon icon={faStar} className="more-small-text text-warning me-1" />
-                                <FontAwesomeIcon icon={faStar} className="more-small-text text-warning me-1" />
-                            </div>
-
-                            <div className="col-6">
-                                <div className="text-end d-flex justify-content-end">
-                                    <div className="text-end me-1">
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
 
                     <Link to={`/booking/${_id}`}>

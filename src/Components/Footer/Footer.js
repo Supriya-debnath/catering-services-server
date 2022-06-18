@@ -12,11 +12,11 @@ const Footer = () => {
                         {/* About */}
                         <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <h6 className="text-uppercase fw-bold">
-                                Catering Services
+                                Catering & Event Management
                             </h6>
                             <hr
                                 className="mb-4 mt-0 d-inline-block mx-auto"
-                                style={{ width: "60px", backgroundColor: "#0DCAF0", height: "2px" }}
+                                style={{ width: "60px", backgroundColor: "#0DCAF9", height: "2px" }}
                             />
                             <p className="small-text footer-about">
                             The caterer is responsible for developing the menu and serving the food, and assisting with the cleanup.
@@ -112,7 +112,7 @@ const Footer = () => {
 
                             <p className="small-text">
                                 <i className="fas fa-home me-3"></i>
-                                Dhaka, Gulshan 1212, Bangladesh
+                               chan 13/A, Panthopath, Dhaka, Bangladesh
                             </p>
 
                             <p className="small-text">
@@ -137,12 +137,13 @@ const Footer = () => {
             {/* Copyright */}
             <div
                 className="text-center p-3 small-text"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
             >
-                <span className="me-2">© 2021 Copyright</span>
+                <span className="me-2">© 2022 Copyright</span>
+               {/* <span className='y'> Catering & Event Management</span> */}
 
                 <NavLink to="/" className="text-white text-decoration-none">
-                    Catering Services
+                    Catering & Event Management
                 </NavLink>
             </div>
         </footer>

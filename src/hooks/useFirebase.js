@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, 
-onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } 
-from "firebase/auth";
+onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, 
+sendEmailVerification } from "firebase/auth";
 
 import initializeFirebase from "../Components/Firebase/firebase.init";
 
@@ -41,6 +41,8 @@ const useFirebase = () => {
                 const newUser = { email, displayName: name };
                 setUser(newUser);
 
+                verifyEmail();
+
                 // set name after register
                 updateProfile(auth.currentUser, {
                     displayName: name,
@@ -48,12 +50,24 @@ const useFirebase = () => {
                     .then(() => {})
                     .catch((error) => {});
                 history.replace("/");
+                
             })
             .catch((error) => {
                 setError(error.message);
             })
             .finally(() => setLoading(false));
     };
+
+
+
+    // Send Verify Email Address
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+        .then(result => {
+            console.log(result);
+        })
+    }
+
 
     // user login
     const handleUserLogin = (email, password, location, history) => {

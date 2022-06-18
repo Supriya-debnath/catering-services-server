@@ -1,0 +1,17 @@
+.package{
+    background-color: rgb(250, 245, 237);
+    /* font-style: italic; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.packages2{
+    padding-top: 40px;
+}
+.package_number{
+    padding-top: 40px;
+}
+.tk{
+    color: brown;
+}
+.package p{
+    text-align: center;
+}

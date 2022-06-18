@@ -18,6 +18,9 @@ import Register from './Components/Register/Register';
 import OurServices from './Components/OurServices/OurServices';
 import Booking from './Components/Booking/Booking';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
+import Blogs from './Components/Blogs/Blogs';
+import Payment from './Components/Payment/Payment';
+import MobileBanking from './Components/MobileBanking/MobileBanking';
 
 export const UserContext=createContext();
 
@@ -46,11 +49,18 @@ function App() {
          <Route path="/about">
            <AboutUs></AboutUs>
          </Route>
+         <Route path="/payment">
+           <Payment></Payment>
+         </Route>
+         <Route path="/MobileBanking">
+           <MobileBanking></MobileBanking>
+         </Route>
+         <Route path="/blogs">
+          <Blogs></Blogs>
+         </Route>
           <PrivateRoute path="/booking/:id">
             <Booking></Booking>
           </PrivateRoute>
-          
-
          <Route path="/login">
            <Login></Login>
          </Route>

@@ -18,7 +18,7 @@ const OurServices = () => {
         <div className="mb-4">
         <div className="service-banner text-center">
             <h4 className="display-6 cursive-text service-title animate__animated animate__zoomIn">
-            Welcome to Grenda, a premier catering <br /> and event planning services.
+            Welcome to Easy, a premier catering <br /> and event planning services.
             </h4>
             <div>
                 <div>
